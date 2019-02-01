@@ -1,9 +1,11 @@
-# Goal #
+# Lin.Security: 1
+
+## Goal
 root
 
-# Download #
-https://www.vulnhub.com/entry/linsecurity-1,244/
+## Download
+[https://www.vulnhub.com/entry/linsecurity-1,244/](https://www.vulnhub.com/entry/linsecurity-1,244/)
 
-# Walkthrough #
+## Walkthrough
 Initially given credentials bob/secret
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2018/Lin.Security_1/imgs/linsecurity001.png)
+<br>![alt text](imgs/linsecurity001.png)
