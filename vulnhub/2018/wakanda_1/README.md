@@ -1,5 +1,7 @@
-# wakanda: 1
-asdf
+---
+layout: post
+title: wakanda: 1
+---
 
 ## goal
 3 flags / root
