@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Test
-permalink: /test/
+title: Vulnhub Walkthroughs
+permalink: /vulnhub/
 ---
 
 A TEST
