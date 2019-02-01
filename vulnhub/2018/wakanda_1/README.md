@@ -1,13 +1,13 @@
 
 ## wakanda: 1
 
-## Goal
+### Goal
 3 flags / root
 
-## Download
+### Download
 [https://www.vulnhub.com/entry/wakanda-1,251/](https://www.vulnhub.com/entry/wakanda-1,251/)
 
-## Walkthrough
+### Walkthrough
 **nmap**
 <br>![alt text](/imgs/nmap.png)
 <br><br>
