@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blacklight: 1
-permalink: /vulnhub/2018/Blacklight_1
+permalink: vulnhub/2018/Blacklight_1
 ---
 
 ## Goal
@@ -16,13 +16,13 @@ idk, got both flags & root...after a ***couple*** of reboots :)
 
 ## Walkthrough
 **nmap**
-<br>![alt text](/imgs/nmap.png)
+<br>![alt text](imgs/nmap.png)
 <br><br>**default 80**
-<br>![alt text](/imgs/default80.png)
+<br>![alt text](imgs/default80.png)
 <br><br>**default 80 continued**
-<br>![alt text](/imgs/default80_2.png)
+<br>![alt text](imgs/default80_2.png)
 <br><br>**dirb**
-<br>![alt text](/imgs/dirb.png)
+<br>![alt text](imgs/dirb.png)
 <br><br>**robots.txt**
 <br>![alt text](/imgs/robots.png)
 <br><br>**flag 1 and hint**
