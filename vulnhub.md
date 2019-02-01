@@ -5,4 +5,5 @@ permalink: /vulnhub/
 ---
 
 ## 2018
-[wakanda: 1](https://bzyo.github.io/vulnhub/2018/wakanda_1/)
+[wakanda: 1](https://bzyo.github.io/vulnhub/2018/wakanda_1/)<br>
+[Blacklight: 1](https://bzyo.github.io/vulnhub/2018/Blacklight_1/)
