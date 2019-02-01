@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blacklight: 1
-permalink: vulnhub/2018/Blacklight_1
+permalink: vulnhub/2018/Blacklight_1/README.md
 ---
 
 ## Goal
