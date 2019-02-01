@@ -4,7 +4,7 @@
 uid=0(root) gid=0(root) groups=0(root)
 
 ## Download 
-[https://www.vulnhub.com/entry/lazysysadmin-1,205/](https://www.vulnhub.com/entry/lazysysadmin-1,205/0
+[https://www.vulnhub.com/entry/lazysysadmin-1,205/](https://www.vulnhub.com/entry/lazysysadmin-1,205/0)
 
 ## Walkthrough 
 Initial nmap shows ports open on 22, 80, 139, 445 and 3306
