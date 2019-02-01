@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Vulnhub Walkthroughs
-permalink: /vulnhub/
+title: Completed CTF challenges
+permalink: /ctfs/
 ---
 # Completed CTF challenges
 
