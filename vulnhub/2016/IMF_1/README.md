@@ -1,188 +1,190 @@
-# Goal #
+# IMF: 1
+
+## Goal 
 6 flags in flag{base64hash} format<br>
 root
 
-# Download #
-https://www.vulnhub.com/entry/imf-1,162/
+## Download 
+[https://www.vulnhub.com/entry/imf-1,162/](https://www.vulnhub.com/entry/imf-1,162/)
 
-# Walkthrough #
+## Walkthrough
 **nmap**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/nmap.png)
+<br>![alt text](imgs/nmap.png)
 <br><br>
 **default 80**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/default80.png)
+<br>![alt text](imgs/default80.png)
 <br><br>
 **flag 1 found in source**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag1.png)
+<br>![alt text](imgs/flag1.png)
 <br><br>
 **flag 1 decoded gives hint to look at all the files**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag1decoded.png)
+<br>![alt text](imgs/flag1decoded.png)
 <br><br>
 **looking further at source the js files look like base64**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/jsfiles.png)
+<br>![alt text](imgs/jsfiles.png)
 <br><br>
 **putting together and decoding gives flag 2 and next hint looks like a directory**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag2.png)
+<br>![alt text](imgs/flag2.png)
 <br><br>
 **hint from flag 2 gives login page**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/imfadmin.png)
+<br>![alt text](imgs/imfadmin.png)
 <br><br>
 **source hints to sqli...yeah i wasn't able to get it**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/imfadmin_source.png)
+<br>![alt text](imgs/imfadmin_source.png)
 <br><br>
 **went to gobuster and dirb after failing at sqli**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/gobuster.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/dirb.png)
+<br>![alt text](imgs/gobuster.png)
+<br>![alt text](imgs/dirb.png)
 <br><br>
 **image found contains qr code**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/whiteboard.png)
+<br>![alt text](imgs/whiteboard.png)
 <br><br>
 **flag 4 found and gives php upload file name**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag4.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag4decoded.png)
+<br>![alt text](imgs/flag4.png)
+<br>![alt text](imgs/flag4decoded.png)
 <br><br>
 **using found uploader, a test upload of jpg is successful**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/uploadr942.png)
+<br>![alt text](imgs/uploadr942.png)
 <br><br>
 **we know from gobuster of uploads/image directories but file isn't there**<br>
 **looking at source after upload there is a hash commented out**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/uploadhash.png)
+<br>![alt text](imgs/uploadhash.png)
 <br><br>
 **hash plus file ext we find our uploaded image**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/uploadtest.png)
+<br>![alt text](imgs/uploadtest.png)
 <br><br>
 **trying to upload a php file fails**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/nophp.png)
+<br>![alt text](imgs/nophp.png)
 <br><br>
 **adding .jpg to .php file fails due to signature checks**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/extadd.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/crappywaf.png)
+<br>![alt text](imgs/extadd.png)
+<br>![alt text](imgs/crappywaf.png)
 <br><br>
 **also find there are file size restrictions, but gifs work**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/sizerestrict.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/gifs.png)
+<br>![alt text](imgs/sizerestrict.png)
+<br>![alt text](imgs/gifs.png)
 <br><br>
 **after much searching it came to a combination of things to overcome the upload restrictions**<br>
 **file restrictions using GIF89a; as found in this [post](https://xapax.gitbooks.io/security/content/bypass_image_upload.html) worked**<br>
 **after so many php oneliner restrictions, using backticks as shown [here](http://php.net/manual/en/language.operators.execution.php) worked**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/cmdgif.png)
+<br>![alt text](imgs/cmdgif.png)
 <br><br>
 **uploading and calling the above gif/code gives code execution**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/rce.png)
+<br>![alt text](imgs/rce.png)
 <br><br>
 **modifying code, uploading and calling again gives flag 5**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag5.png)
+<br>![alt text](imgs/flag5.png)
 <br><br>
 **next hint seems like something running on the system so we need a shell**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag5decoded.png)
+<br>![alt text](imgs/flag5decoded.png)
 <br><br>
 **since flag 3 was missed, we modify our code to look at file listings and cat out the index.php**<br>
 **whatever lolz**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/filelists.png)<br>
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag3.png)<br>
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag3decoded.png)
+<br>![alt text](imgs/filelists.png)<br>
+<br>![alt text](imgs/flag3.png)<br>
+<br>![alt text](imgs/flag3decoded.png)
 <br><br>
 **now for reverse shell, we know there are a bunch of restrictions around php oneliners**<br>
 **so maybe [python](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)? initial call didn't work so we look at an all file list**<br>
 **specifically under /usr/bin and we find python3**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/python3.png)
+<br>![alt text](imgs/python3.png)
 <br><br>
 **this is our code to get a shell**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/python3revshell.png)
+<br>![alt text](imgs/python3revshell.png)
 <br><br>
 **finally, but we're just getting started**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/revshell.png)
+<br>![alt text](imgs/revshell.png)
 <br><br>
 **from hint we look at /etc/services and find it's running on 7788/tcp**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/agentservice.png)
+<br>![alt text](imgs/agentservice.png)
 <br><br>
 **also did find for agent**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/agentsearch.png)
+<br>![alt text](imgs/agentsearch.png)
 <br><br>
 **running agent looks to be what were looking for**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/agentlocation.png)
+<br>![alt text](imgs/agentlocation.png)
 <br><br>
 **directory contains two files**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/usrlocalbin.png)
+<br>![alt text](imgs/usrlocalbin.png)
 <br><br>
 **we know the binary asks for an ID and using strings we see a string compare**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/strings.png)
+<br>![alt text](imgs/strings.png)
 <br><br>
 **forgot we were on a remote system and started examining file...ltrace was installed and code found :)**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/ltrace.png)
+<br>![alt text](imgs/ltrace.png)
 <br><br>
 **code works and im assuming a buffer overflow**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/agentid.png)
+<br>![alt text](imgs/agentid.png)
 <br><br>
 **after some time we find option 3, submit report is vulnerable**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/bof.png)
+<br>![alt text](imgs/bof.png)
 <br><br>
 **so now what? remembered that this isn't only a binary, but it's running on port 7788**<br>
 **only port 80 is open though**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/nc.png)
+<br>![alt text](imgs/nc.png)
 <br><br>
 **insert lots of wasted time x1000**<br><br>
 **finally noticed that knockd is running and remembered the access_codes file**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/knockd.png)
+<br>![alt text](imgs/knockd.png)
 <br><br>
 **i know of port knocking, but not very familiar...off to google**<br><br>
 **found good digital ocean [post](https://www.digitalocean.com/community/tutorials/how-to-use-port-knocking-to-hide-your-ssh-daemon-from-attackers-on-ubuntu) of what i needed todo**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/digoce.png)
+<br>![alt text](imgs/digoce.png)
 <br><br>
 **followed instructions and modified a bit**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/portknock.png)
+<br>![alt text](imgs/portknock.png)
 <br><br>
 **and it worked**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/nc7788.png)
+<br>![alt text](imgs/nc7788.png)
 <br><br>
 **so now we have to work on the exploit on our local machine**<br>
 **simple copy over to the web directory and a wget**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/cpagent.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/wget.png)
+<br>![alt text](imgs/cpagent.png)
+<br>![alt text](imgs/wget.png)
 <br><br>
 **now onto the binary**<br><br>
 **start by creating pattern of 200**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/pattern.png)
+<br>![alt text](imgs/pattern.png)
 <br><br>
 **examined in gdb**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/gdb01.png)
+<br>![alt text](imgs/gdb01.png)
 <br><br>
 **find the offset of 168**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/offset.png)
+<br>![alt text](imgs/offset.png)
 <br><br>
 **then test offset in gdb and it's correct**<br>
 **also find that the overflow is in eax so we find our jmp or call rather to this register**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/calleax.png)
+<br>![alt text](imgs/calleax.png)
 <br><br>
 **started to play around with [pwntools](https://github.com/Gallopsled/pwntools) lately and created a skeleton exploit script**<br>
 **referenced the [documentation](http://docs.pwntools.com/en/stable/) and this [post](https://0xdeadbeefjerky.github.io/2017/09/23/csaw-ctf-pilot-writeup.html) heavily**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/skel.png)
+<br>![alt text](imgs/skel.png)
 <br><br>
 **test out the skeleton code, seems to work**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/testskel.png)
+<br>![alt text](imgs/testskel.png)
 <br><br>
 **we know we need a reverse shell so we create using msfvenom**<br>
 **after some back and forth i find \x0a is also bad char**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/msfvenom.png)
+<br>![alt text](imgs/msfvenom.png)
 <br><br>
 **update the payload of our script**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/payloadupdate.png)
+<br>![alt text](imgs/payloadupdate.png)
 <br><br>
 **do an initial test and it works; so we remove the interactive stance from our script**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/skeltest1.png)
+<br>![alt text](imgs/skeltest1.png)
 <br><br>
 **we then setup a local listener and test again...BOOM**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/skeltest2.png)
+<br>![alt text](imgs/skeltest2.png)
 <br><br>
 **with that working we run script against remote system and we have a reverse shell as root**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/rootrevshell.png)
+<br>![alt text](imgs/rootrevshell.png)
 <br><br>
 **flag 6 found and decoded**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag6.png)
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/flag6decoded.png)
+<br>![alt text](imgs/flag6.png)
+<br>![alt text](imgs/flag6decoded.png)
 <br><br>
 **the end**
-<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2016/IMF_1/imgs/theendtxt.png)
+<br>![alt text](imgs/theendtxt.png)
 <br><br>
 
 

@@ -1,10 +1,10 @@
 # Bulldog: 1
 
-## Download
-[https://www.vulnhub.com/entry/bulldog_1,211/](https://www.vulnhub.com/entry/bulldog_1,211/)
-
 ## Goal
 uid=0(root) gid=0(root) groups=0(root)
+
+## Download
+[https://www.vulnhub.com/entry/bulldog_1,211/](https://www.vulnhub.com/entry/bulldog_1,211/)
 
 ## Walkthrough 
 Initial nmap shows ports open on 23, 80, and 8080

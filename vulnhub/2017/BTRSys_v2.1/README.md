@@ -1,10 +1,10 @@
 # BTRSys: v2.1
 
-## Download
-[https://www.vulnhub.com/entry/btrsys-v21,196/](https://www.vulnhub.com/entry/btrsys-v21,196/)
-
 ## Goal 
 uid=0(root) gid=0(root) groups=0(root)
+
+## Download
+[https://www.vulnhub.com/entry/btrsys-v21,196/](https://www.vulnhub.com/entry/btrsys-v21,196/)
 
 ## Walkthrough
 Initial nmap reveals ports on 21, 22, and 80
