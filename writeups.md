@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Vulnhub Walkthroughs
-permalink: /vulnhub/
+title: Various Writeups
+permalink: /writeups/
 ---
 # Vulnhub Walkthroughs
 
@@ -37,4 +37,10 @@ permalink: /vulnhub/
 [IMF: 1](https://bzyo.github.io/vulnhub/2016/IMF_1)<br>
 [SkyDog: 2016 - Catch Me If You Can](https://bzyo.github.io/vulnhub/2016/SkyDog_2016-CatchMeIfYouCan)<br>
 [USV: 2016 (v1.0.1)](https://bzyo.github.io/vulnhub/2016/USV_2016-v1.0.1)<br>
-[Wallaby's: Nightmare (v1.0.2)](https://bzyo.github.io/vulnhub/2016/Wallabys_Nightmare-v1.0.2)<br>
+[Wallaby's: Nightmare (v1.0.2)](https://bzyo.github.io/vulnhub/2016/Wallabys_Nightmare-v1.0.2)<br
+
+# Completed CTF Challenges
+
+## 2018
+[tuctf](https://bzyo.github.io/ctfs/2018/tuctf)<br>
+[otterctf](https://bzyo.github.io/ctfs/2018/otterctf)
