@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Various Writeups
+title: Various Write-ups
 permalink: /writeups/
 ---
 # Vulnhub Walkthroughs
