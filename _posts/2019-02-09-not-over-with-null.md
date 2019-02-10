@@ -13,9 +13,9 @@ Intrigued by this I managed to find a couple of applications where this method c
 
 Three space problems with this method that I have found that need to be considered.  First is  the null byte essentially ends your payload, so you only have the length of the overflow (minus SEH and nSEH) for your shellcode.  Second is your shellcode space decreases again as you have to take into account the length of the jump or jumps back to the start of your shellcode.  Third is that you might be limited on space for your jump code thus limiting how far you can jump.
 
-**E-DB:** [46058](https://www.exploit-db.com/exploits/46058)
-**Vulnerable App:** [download](https://www.exploit-db.com/apps/6875ea0357dab3ea57d8af67cf67ad83-tsmanager_setup_3.1.0.238.exe)
-**Tested on:** Windows 7 SP1 x86
+**E-DB:** [46058](https://www.exploit-db.com/exploits/46058)<br>
+**Vulnerable App:** [download](https://www.exploit-db.com/apps/6875ea0357dab3ea57d8af67cf67ad83-tsmanager_setup_3.1.0.238.exe)<br>
+**Tested on:** Windows 7 SP1 x86<br>
 **Assumptions:** familiar with regular SEH BoF and using [mona](https://github.com/corelan/mona)
 
 ## Offset / Bad chars
@@ -43,7 +43,7 @@ We find a bunch and the only module available to use starts with a null byte
 ![alt text](../images/null/mona-modules.png)
 
 ## POP-POP-RETN
-Moving on we choose a PPR address to replace the C’s in our PoC and see if we can use it to return to our B’s (nSEH). We also need to remove the additional D’s and add a [:-1] to remove the null byte
+Moving on we choose a PPR address to replace the C’s in our PoC and see if we can use it to return to our B’s (nSEH). We also need to remove the additional D’s and add a [:-1] to remove the null byte<br>
 ![alt text](../images/null/poc1.png)
 
 Before running the updated PoC, we add a breakpoint at our PPR address
@@ -71,7 +71,7 @@ We also set a breakpoint 6 bytes back from our current breakpoint
 A quick step through we land 6 bytes back from our original B’s (nSEH)
 ![alt text](../images/null/poc2-3.png)
 
-Before moving to the second jump, let’s update our PoC replacing our nSEH with our first jump
+Before moving to the second jump, let’s update our PoC replacing our nSEH with our first jump<br>
 ![alt text](../images/null/poc2.png)
 
 ## Shellcode
@@ -131,12 +131,12 @@ So now let’s see if we can pop calc. Hitting Shift + F9 crashes the app and th
 ![alt text](../images/null/poc4-3.png)
 
 ## Additional PoCs
-E-DB: [45071](https://www.exploit-db.com/exploits/45071)
-E-DB: [45151](https://www.exploit-db.com/exploits/45151)
+E-DB: [45071](https://www.exploit-db.com/exploits/45071)<br>
+E-DB: [45151](https://www.exploit-db.com/exploits/45151)<br>
 E-DB: [46021](https://www.exploit-db.com/exploits/46021)
 
 ## References
-SEH: [Corelan](https://www.corelan.be/index.php/2009/07/25/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-3-seh/) and [FuzzySec](http://fuzzysecurity.com/tutorials/expDev/3.html)
-Concept: [n30m1nd](https://www.exploit-db.com/exploits/40630) 
+SEH: [Corelan](https://www.corelan.be/index.php/2009/07/25/writing-buffer-overflow-exploits-a-quick-and-basic-tutorial-part-3-seh/) and [FuzzySec](http://fuzzysecurity.com/tutorials/expDev/3.html)<br>
+Concept: [n30m1nd](https://www.exploit-db.com/exploits/40630) <br>
 Jumps: [Daniel Sedory](https://thestarman.pcministry.com/asm/2bytejumps.htm)
 
