@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "not over with null"
+title:  "jumping back with null"
 ---
 
-# not over with null
+# jumping back with null
 
 While searching for buffer overflows in various software applications in an effort to better understand this type of vulnerability, I continued to come across overflows that were protected by the Structured Exception Handler (SEH) mechanism.  For many of these, I was able to find pointers that passed all criteria (no Rebase, no ASLR, etc) that could be used in order to bypass this protection.  However a large problem that caused me to stop developing an exploit and move on was due to the pointer’s address starting with a null byte "00" which is a bad character and not usable.
 
@@ -127,7 +127,7 @@ Running the newly updated PoC and after taking the exception and PPR we’re at 
 After stepping through twice we find ourselves 10 bytes before our shellcode
 ![alt text](../images/null/poc4-2.png)
 
-So now let’s see if we can pop calc. Hitting Shift + F9 crashes the app and there it is
+So now let’s see if we can pop calc. Hitting **Shift + F9** crashes the app and there it is
 ![alt text](../images/null/poc4-3.png)
 
 ## Additional PoCs
