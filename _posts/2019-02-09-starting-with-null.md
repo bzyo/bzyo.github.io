@@ -83,10 +83,10 @@ Generating our shellcode with msfvenom and remembering to account for bad charac
 ## Math
 So here comes some math.  We know we have 394 bytes free and 220 bytes needed for shellcode.  Subtracting those two leaves 174 bytes.  This isn’t a very large jump back, but to conserve how much we have to jump we’ll sandwich our shellcode between the leftover bytes.
 
-So what are we doing?
-	Our **junk(400)** will be split into **junk1(100)** and **junk2(74)**
-	Add our calc **shellcode(220)** between both junk1 and junk2
-	As a placeholder with C’s, we’ll add **jump2(6)** 
+So what are we doing?<br>
+	Our **junk(400)** will be split into **junk1(100)** and **junk2(74)**<br>
+	Add our calc **shellcode(220)** between both junk1 and junk2<br>
+	As a placeholder with C’s, we’ll add **jump2(6)** <br>
 
 Let’s update our PoC with this information prior adding our second jump. 
 ![alt text](../images/null/poc3.png)
