@@ -11,7 +11,7 @@ That was until I came across this [exploit database entry](https://www.exploit-d
 
 Intrigued by this, I managed to find a couple of applications where this method could be put into practice. There were varying degrees of difficulty amongst these. So to demonstrate this method I’m going to show an example with only two jumps and a couple of bad characters. 
 
-Three space problems with this method that I have found that need to be considered.  First is  the null byte essentially ends your payload, so you only have the length of the overflow (minus SEH and nSEH) for your shellcode.  Second is your shellcode space decreases again as you have to take into account the length of the jump or jumps back to the start of your shellcode.  Third is that you might be limited on space for your jump code thus limiting how far you can jump.
+Three space problems with this method that I have found that need to be considered.  First is the null byte essentially ends your payload, so you only have the length of the overflow (minus SEH and nSEH) for your shellcode.  Second is your shellcode space decreases as you have to take into account the length of the jump or jumps back to the start of your shellcode.  Third is that you might be limited on space for your jump code thus limiting how far you can jump.
 
 **E-DB:** [46058](https://www.exploit-db.com/exploits/46058)<br>
 **Vulnerable App:** [download](https://www.exploit-db.com/apps/6875ea0357dab3ea57d8af67cf67ad83-tsmanager_setup_3.1.0.238.exe)<br>
