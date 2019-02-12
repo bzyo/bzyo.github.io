@@ -7,7 +7,7 @@ permalink: /writeups/
 
 ## 2018
 [FourAndSix: 1](https://bzyo.github.io/vulnhub/2018/FourAndSix_1)<br>
-[Temple of Doom: 1](https://bzyo.github.io/vulnhub/2018/TempleofDoom_1)<br>
+[Temple of Doom: 1](https://bzyo.github.io/vulnhub/2018/Temple_of_Doom_1)<br>
 [Blacklight: 1](https://bzyo.github.io/vulnhub/2018/Blacklight_1/)<br>
 [Lampiao: 1](https://bzyo.github.io/vulnhub/2018/Lampiao_1/)<br>
 [Toppo: 1](https://bzyo.github.io/vulnhub/2018/Toppo_1/)<br>
