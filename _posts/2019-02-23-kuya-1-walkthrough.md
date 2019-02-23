@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Vulnhub Walkthrough: Kuya: 1"
-excerpt: boot2root by [@syedashhad](https://twitter.com/syedashhad)
+title:  "Kuya: 1"
+excerpt: boot2root by @syedashhad
 ---
 
 # Kuya: 1

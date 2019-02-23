@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Vulnhub Walkthrough: SkyDog: 2016 - Catch Me If You Can"
-excerpt: CTF by [@jamesbower](https://twitter.com/jamesbower)
+title:  "SkyDog: 2016 - Catch Me If You Can"
+excerpt: CTF by @jamesbower
 ---
 # Skydog: 2016 - Catch Me If You Can
 
