@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "vulnhub walkthrough: kuya: 1"
+excerpt: boot2root by @syedashhad
+---
+
 # Kuya: 1
 
 ## Goal #
