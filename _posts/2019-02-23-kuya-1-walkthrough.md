@@ -5,4 +5,4 @@ excerpt: boot2root by @syedashhad
 
 ---
 
-redirect_to: ..\vulnhub\2018\Kuya_1
+redirect_to: ../vulnhub/2018/Kuya_1
