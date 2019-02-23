@@ -2,7 +2,7 @@
 layout: post
 title:  "SkyDog: 2016 - Catch Me If You Can"
 excerpt: CTF by @jamesbower
-tags: vulnhub ctf
+tags: [vulnhub, ctf, walkthrough]
 ---
 # Skydog: 2016 - Catch Me If You Can
 

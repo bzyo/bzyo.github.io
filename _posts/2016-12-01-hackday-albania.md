@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackday Albania"
 excerpt: CTF by @r_73en
-tags: vulnhub ctf
+tags: [vulnhub, ctf, walkthrough]
 ---
 # Hackday: Albania
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "Kuya: 1"
 excerpt: boot2root by @syedashhad
+tags: [vulnhub, ctf, walkthrough]
 ---
 
 # Kuya: 1
