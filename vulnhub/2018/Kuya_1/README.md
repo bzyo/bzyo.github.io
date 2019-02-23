@@ -13,7 +13,7 @@
 **default 80**
 <br>![alt text](imgs/default80.png)
 <br><br>
-**default 80 sources...trolls*
+**default 80 sources...trolls**
 <br>![alt text](imgs/default80source.png)
 <br><br>
 **gobuster reveals some directories**
@@ -55,10 +55,10 @@
 **let's brute force**
 <br>![alt text](imgs/lootbrutejohn.png)
 <br><br>
-**using found password it works**
+**using found password, it works**
 <br>![alt text](imgs/7zloot.png)
 <br><br>
-**using the priv key it seems it's password protected**
+**using the priv key, it seems it's password protected**
 <br>![alt text](imgs/idrsapassprotect.png)
 <br><br>
 **we brute force and find the password**
@@ -86,7 +86,7 @@
 <br>![alt text](imgs/bashhist.png)
 <br><br>
 **after some googling, an interesting find seems to work to read /etc/shadow**<br>
-**(https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/)[https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/]
+(https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/)[https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/]
 <br>![alt text](imgs/shadow.png)
 <br><br>
 
