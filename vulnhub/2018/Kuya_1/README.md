@@ -25,13 +25,13 @@
 **loot gives some images to investigate**
 <br>![alt text](imgs/loot80.png)
 <br><br>
-**steghide extract on the images gives some files**
+**steghide extract on the images gives some files, no password needed**
 <br>![alt text](imgs/steghide.png)
 <br><br>
-**secret.txt troll**
+**secret.txt...troll**
 <br>![alt text](imgs/secrettxt.png)
 <br><br>
-**emb.txt brainfuck**
+**emb.txt...brainfuck**
 <br>![alt text](imgs/embtxt.png)
 <br><br>
 **flag 1 is revealed**
@@ -43,7 +43,7 @@
 **loot.pcapng reveals 7z file**
 <br>![alt text](imgs/lootpcap.png)
 <br><br>
-**export the pcap**
+**export from pcap**
 <br>![alt text](imgs/exportpcap.png)
 <br><br>
 **7z file is password protected**
@@ -86,7 +86,7 @@
 <br>![alt text](imgs/bashhist.png)
 <br><br>
 **after some googling, an interesting find seems to work to read /etc/shadow**<br>
-(https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/)[https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/]
+[https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/](https://nxnjz.net/2018/08/an-interesting-privilege-escalation-vector-getcap/)
 <br>![alt text](imgs/shadow.png)
 <br><br>
 
