@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "DC416: 2016 (Dick Dastardly)"
+title:  "DC416: 2016 - Dick Dastardly"
 excerpt: CTF by @_RastaMouse
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# DC416: 2016 (Dick Dastardly)
+# DC416: 2016 - Dick Dastardly
 
 ## Goal 
 Capture all 4 flags in flag{} format
