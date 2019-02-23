@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "starting with null"
-excerpt: using a null byte to your advantage
+title:  "Starting with Null"
+excerpt: Using a null byte to your advantage
 
 ---
 
