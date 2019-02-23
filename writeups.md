@@ -20,6 +20,8 @@ permalink: /writeups/
 [BSides Vancouver: 2018](https://bzyo.github.io/vulnhub/2018/BSides-Vancouver_2018)<br>
 [DerpNStink: 1](https://bzyo.github.io/vulnhub/2018/DerpNStink_1)<br>
 [Matrix: 1](https://bzyo.github.io/vulnhub/2018/Matrix_1)
+[Kuya: 1](https://bzyo.github.io/vulnhub/2018/Kuya_1)
+
 
 ## 2017
 [BTRSys: v1](https://bzyo.github.io/vulnhub/2017/BTRSys_v1)<br>
