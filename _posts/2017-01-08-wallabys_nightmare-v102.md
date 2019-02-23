@@ -1,10 +1,17 @@
-# Wallaby's: Nightmare (v1.0.2)
+---
+layout: post
+title:  "Wallaby's: Nightmare v1.0.2"
+excerpt: CTF by waldo
+tags: [vulnhub, boot2root, walkthrough]
+---
+
+# Wallaby's: Nightmare v1.0.2
 
 ## Goal
 uid=0(root) gid=0(root) groups=0(root)
 
 ## Download 
-https://www.vulnhub.com/entry/wallabys-nightmare-102,176/
+[https://www.vulnhub.com/entry/wallabys-nightmare-102,176/](https://www.vulnhub.com/entry/wallabys-nightmare-102,176/)
 
 ## Walkthrough 
 Initial nmap shows ssh on 22, web on 80, and closed irc on 6667
