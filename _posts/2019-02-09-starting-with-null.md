@@ -5,7 +5,7 @@ excerpt: Using a null byte to your advantage
 
 ---
 
-# starting with null
+# Starting with Null
 
 While searching for buffer overflows in various software applications in an effort to better understand this type of vulnerability, I continued to come across overflows that were protected by the Structured Exception Handler (SEH) mechanism.  For many of these, I was able to find pointers that passed all criteria (no Rebase, no ASLR, etc) that could be used in order to bypass this protection.  However a large problem that caused me to stop developing an exploit and move on was due to the pointer’s address starting with a null byte "00" which is a bad character and not usable.
 
