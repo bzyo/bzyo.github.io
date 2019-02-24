@@ -1,4 +1,4 @@
---
+---
 layout: post
 title:  "LazySysAdmin: 1"
 excerpt: CTF by @TogieMcdogie
