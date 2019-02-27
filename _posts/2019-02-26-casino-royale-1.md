@@ -114,7 +114,7 @@ root
 <br>![alt text](../vulnhub/CasinoRoyale_1/ultra.png)
 <br><br>
 
-**browring to main.php, nothing special**
+**browsing to main.php, nothing special**
 <br>![alt text](../vulnhub/CasinoRoyale_1/ultra-main.png)
 <br><br>
 
@@ -135,7 +135,7 @@ https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 <br>![alt text](../vulnhub/CasinoRoyale_1/xxe-success.png)
 <br><br>
 
-**now we have users, know that ftp is open and from the comment in the ultra source that it's an easy password.  through hydra at it...success**
+**now we have users, know that ftp is open and from the comment in the ultra source that it's an easy password.  throw hydra at it...success**
 <br>![alt text](../vulnhub/CasinoRoyale_1/ftppass.png)
 <br><br>
 
@@ -175,7 +175,7 @@ https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 <br>![alt text](../vulnhub/CasinoRoyale_1/mi6.png)
 <br><br>
 
-**from here we need to become user le, so we look at some of the servered by the webserver. it shows index.html calls collect.php**
+**from here we need to become user le, so we look at some of the files being served by the webserver. it shows index.html calls collect.php**
 <br>![alt text](../vulnhub/CasinoRoyale_1/indexcollect.png)
 <br><br>
 
