@@ -64,7 +64,7 @@ root
 <br><br>
 
 **pokermax admin logged in**
-<br>![alt text](../vulnhub/CasinoRoyale_1/pokermaxadmin-loggedin.png)
+<br>![alt text](../vulnhub/CasinoRoyale_1/pokeradmin-loggedin.png)
 <br><br>
 
 **looking around, user valenka has some info in the profile**
@@ -82,7 +82,7 @@ root
 **quick search on e-db reveals a csrf attack that looks like it could work**
 [https://www.exploit-db.com/exploits/35301](https://www.exploit-db.com/exploits/35301)
 
-**setup the crsf file and hosted on attacking machine through apache**
+**setup the csrf file and hosted on attacking machine through apache**
 <br>![alt text](../vulnhub/CasinoRoyale_1/snowfoxcsrf.png)
 <br><br>
 
@@ -90,7 +90,7 @@ root
 <br>![alt text](../vulnhub/CasinoRoyale_1/pokerclients.png)
 <br><br>
 
-**final send email with a link to the crsf file**
+**final send email with a link to the csrf file**
 <br>![alt text](../vulnhub/CasinoRoyale_1/sendemail.png)
 <br><br>
 
@@ -98,7 +98,7 @@ root
 <br>![alt text](../vulnhub/CasinoRoyale_1/accesslog.png)
 <br><br>
 
-**attempt to sign-in with creds provided in crsf file**
+**attempt to sign-in with creds provided in csrf file**
 <br>![alt text](../vulnhub/CasinoRoyale_1/signin1.png)
 <br><br>
 
@@ -119,7 +119,8 @@ root
 <br><br>
 
 **but we find interesting notes in the source**
-<br>![alt text](../vulnhub/CasinoRoyale_1/ultra-source.png
+<br>![alt text](../vulnhub/CasinoRoyale_1/ultra-source.png)
+<br><br>
 
 **looks like xxe vuln and here is a good post to follow**
 [
@@ -199,7 +200,7 @@ https://depthsecurity.com/blog/exploitation-xml-external-entity-xxe-injection)
 <br><br>
 
 **we setup a netcat listener on the new port, browse site and trigger the python script...we have a reverse shell as user le!!**
-<br>![alt text](../vulnhub/CasinoRoyale_1/lereverse.png)
+<br>![alt text](../vulnhub/CasinoRoyale_1/reversele.png)
 <br><br>
 
 **so now back to the run.sh file, we take a look and we see it's just netstat and ps commands**
