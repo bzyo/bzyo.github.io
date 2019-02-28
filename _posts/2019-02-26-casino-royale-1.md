@@ -5,8 +5,6 @@ excerpt: CTF by @_creosote
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# Casino Royale: 1
-
 ## Goal #
 root
 
