@@ -4,7 +4,6 @@ title:  "Hackday Albania"
 excerpt: CTF by @r_73en
 tags: [vulnhub, ctf, walkthrough]
 ---
-# Hackday: Albania
 
 ## Goal 
 root access + flag.txt

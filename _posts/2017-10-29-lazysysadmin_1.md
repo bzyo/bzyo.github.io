@@ -5,8 +5,6 @@ excerpt: CTF by @TogieMcdogie
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# LazySysAdmin: 1
-
 ## Goal
 uid=0(root) gid=0(root) groups=0(root)
 

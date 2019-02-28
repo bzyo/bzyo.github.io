@@ -5,8 +5,6 @@ excerpt: CTF by @banyrock
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# JIS-CTF: VulnUpload
-
 ## Goal
 Find 5 flags
 

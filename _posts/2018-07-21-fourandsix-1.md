@@ -5,8 +5,6 @@ excerpt: CTF by Fred Wemeijer
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# FourAndSix: 1
-
 ## Goal 
 proof.txt ?
 

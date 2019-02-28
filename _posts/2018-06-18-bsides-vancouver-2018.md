@@ -5,8 +5,6 @@ excerpt: boot2root by @abatchy17
 tags: [vulnhub, boot2root, walkthrough]
 ---
 
-# BSides Vancouver: 2018
-
 ## Goal
 uid=0(root) gid=0(root) groups=0(root)
 

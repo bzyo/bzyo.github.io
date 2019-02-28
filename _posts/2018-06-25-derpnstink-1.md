@@ -5,8 +5,6 @@ excerpt: boot2root by @securekomodo
 tags: [vulnhub, boot2root, walkthrough]
 ---
 
-# DerpNStink: 1 
-
 ## Goal
 4 Flags / Root
 

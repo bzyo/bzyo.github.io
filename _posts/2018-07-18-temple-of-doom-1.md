@@ -5,8 +5,6 @@ excerpt: CTF by @0katz
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# Temple of Doom: 1
-
 ## Goal
 root
 

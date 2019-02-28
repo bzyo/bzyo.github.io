@@ -5,8 +5,6 @@ excerpt: CTF by @insecurity_ltd
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# Lin.Security: 1
-
 ## Goal
 root
 

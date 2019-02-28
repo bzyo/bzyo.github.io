@@ -5,8 +5,6 @@ excerpt: CTF by @_RastaMouse
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# DC416: 2016 - Dick Dastardly
-
 ## Goal 
 Capture all 4 flags in flag{} format
 

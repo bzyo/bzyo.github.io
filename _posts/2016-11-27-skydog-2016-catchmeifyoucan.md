@@ -4,7 +4,6 @@ title:  "SkyDog: 2016 - Catch Me If You Can"
 excerpt: CTF by @jamesbower
 tags: [vulnhub, ctf, walkthrough]
 ---
-# Skydog: 2016 - Catch Me If You Can
 
 ## Goal 
 Capture all 8 flags in the form of flag{MD5 Hash}

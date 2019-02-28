@@ -5,8 +5,6 @@ excerpt: CTF by waldo
 tags: [vulnhub, boot2root, walkthrough]
 ---
 
-# Wallaby's: Nightmare v1.0.2
-
 ## Goal
 uid=0(root) gid=0(root) groups=0(root)
 

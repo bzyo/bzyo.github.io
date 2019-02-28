@@ -5,8 +5,6 @@ excerpt: CTF by @LhHillz
 tags: [vulnhub, ctf, walkthrough]
 ---
 
-# RickdiculouslyEasy: 1
-
 ## Goal 
 130 Points<br>
 uid=0(root) gid=0(root) groups=0(root)
