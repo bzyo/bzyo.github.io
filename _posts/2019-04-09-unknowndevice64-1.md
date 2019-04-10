@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "unknowndevice64: 1"
-excerpt: boot2root by Fred Wemeijer
+excerpt: boot2root by @unknowndevice64
 tags: [vulnhub, boot2root, walkthrough]
 ---
 
