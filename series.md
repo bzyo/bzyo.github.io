@@ -20,5 +20,5 @@ permalink: /series/
 
 **Raven by William McCann**<br>
 [vulnhub info](https://www.vulnhub.com/series/raven,176/)<br>
-[Raven: 1](https://bzyo.github.io/raven-1/)<br>
-[Raven: 2](https://bzyo.github.io/raven-2/)
+[Raven: 1 walkthrough](https://bzyo.github.io/raven-1/)<br>
+[Raven: 2 walkthrough](https://bzyo.github.io/raven-2/)
