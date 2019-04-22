@@ -7,14 +7,14 @@ permalink: /series/
 ## series walkthroughs
 
 **Matrix**<br>
-&nbsp;&nbsp;&nbspMatrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
-&nbsp;&nbsp;&nbspMatrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)
+&nbsp;&nbsp;&nbsp;Matrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
+&nbsp;&nbsp;&nbsp;Matrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)
 
 **DC**<br>
-&nbsp;&nbsp;&nbspDC: 1 [walkthrough](https://bzyo.github.io/dc-1/)<br>
-&nbsp;&nbsp;&nbspDC: 2 [walkthrough](https://bzyo.github.io/dc-2/)<br>
-&nbsp;&nbsp;&nbspDC: 3 [walkthrough](https://bzyo.github.io/dc-3/)
+&nbsp;&nbsp;&nbsp;DC: 1 [walkthrough](https://bzyo.github.io/dc-1/)<br>
+&nbsp;&nbsp;&nbsp;DC: 2 [walkthrough](https://bzyo.github.io/dc-2/)<br>
+&nbsp;&nbsp;&nbsp;DC: 3 [walkthrough](https://bzyo.github.io/dc-3/)
 
 **Raven**<br>
-&nbsp;&nbsp;&nbspRaven: 1 [walkthrough](https://bzyo.github.io/raven-1/)<br>
-&nbsp;&nbsp;&nbspRaven: 2 [walkthrough](https://bzyo.github.io/raven-2/)
+&nbsp;&nbsp;&nbsp;Raven: 1 [walkthrough](https://bzyo.github.io/raven-1/)<br>
+&nbsp;&nbsp;&nbsp;Raven: 2 [walkthrough](https://bzyo.github.io/raven-2/)
