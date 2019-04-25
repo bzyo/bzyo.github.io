@@ -22,5 +22,5 @@ permalink: /series/
 &nbsp;&nbsp;&nbsp;Raven: 2 [walkthrough](https://bzyo.github.io/raven-2/)
 
 **BTRSys by [@ismailonderkaya](https://twitter.com/ismailonderkaya)**<br>
-&nbsp;&nbsp;&nbsp;BTRSys: v1 [walkthrough](https://bzyo.github.io/btrsys-v1/)
+&nbsp;&nbsp;&nbsp;BTRSys: v1 [walkthrough](https://bzyo.github.io/btrsys-v1/)<br>
 &nbsp;&nbsp;&nbsp;BTRSys: v2.1 [walkthrough](https://bzyo.github.io/btrsys_v21/)
