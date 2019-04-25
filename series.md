@@ -10,7 +10,7 @@ permalink: /series/
 &nbsp;&nbsp;&nbsp;Matrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
 &nbsp;&nbsp;&nbsp;Matrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)
 
-**DC Series by [@DCAU7](https://twitter.com/DCAU7)<br>**
+**DC Series by [@DCAU7](https://twitter.com/DCAU7)**<br>
 &nbsp;&nbsp;&nbsp;DC: 1 [walkthrough](https://bzyo.github.io/dc-1/)<br>
 &nbsp;&nbsp;&nbsp;DC: 2 [walkthrough](https://bzyo.github.io/dc-2/)<br>
 &nbsp;&nbsp;&nbsp;DC: 3 [walkthrough](https://bzyo.github.io/dc-3/)<br>
@@ -20,3 +20,7 @@ permalink: /series/
 **Raven by William McCann**<br>
 &nbsp;&nbsp;&nbsp;Raven: 1 [walkthrough](https://bzyo.github.io/raven-1/)<br>
 &nbsp;&nbsp;&nbsp;Raven: 2 [walkthrough](https://bzyo.github.io/raven-2/)
+
+**BTRSys by [@ismailonderkaya](https://twitter.com/ismailonderkaya)**<br>
+&nbsp;&nbsp;&nbsp;BTRSys: v1 [walkthrough](https://bzyo.github.io/btrsys-v1/)
+&nbsp;&nbsp;&nbsp;BTRSys: v2.1 [walkthrough](https://bzyo.github.io/btrsys_v21/)
