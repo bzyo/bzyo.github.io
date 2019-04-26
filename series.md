@@ -16,7 +16,7 @@ permalink: /series/
 &nbsp;&nbsp;&nbsp;DC: 3 [walkthrough](https://bzyo.github.io/dc-3/)<br>
 &nbsp;&nbsp;&nbsp;DC: 4 [walkthrough](https://bzyo.github.io/dc-4/)<br>
 &nbsp;&nbsp;&nbsp;DC: 5 [walkthrough](https://bzyo.github.io/dc-5/)<br>
-&nbsp;&nbsp;&nbsp;DC: 5 [walkthrough](https://bzyo.github.io/dc-6/)
+&nbsp;&nbsp;&nbsp;DC: 6 [walkthrough](https://bzyo.github.io/dc-6/)
 
 **Raven by William McCann**<br>
 &nbsp;&nbsp;&nbsp;Raven: 1 [walkthrough](https://bzyo.github.io/raven-1/)<br>
