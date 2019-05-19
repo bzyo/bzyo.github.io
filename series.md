@@ -4,7 +4,7 @@ title: series
 permalink: /series/
 ---
 
-## Walkthroughs Series
+## Walkthrough Series
 
 **Matrix Seris by [@unknowndevice64](https://twitter.com/unknowndevice64)**<br>
 &nbsp;&nbsp;&nbsp;Matrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
