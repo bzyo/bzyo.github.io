@@ -43,7 +43,7 @@ root
 <br>![alt text](../vulnhub/unknowndevice64_2/infophp.png)
 <br><br>
 
-**turns out to be a private ssh key with a comment, most likley key password**
+**turns out to be a private ssh key with a comment, most likely key password**
 <br>![alt text](../vulnhub/unknowndevice64_2/infophp_key.png)
 <br><br>
 
