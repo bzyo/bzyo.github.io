@@ -29,3 +29,7 @@ permalink: /series/
 **unknowndevice64 Series by [@unknowndevice64](https://twitter.com/unknowndevice64)**<br>
 &nbsp;&nbsp;&nbsp;unknowndevice64: 1 [walkthrough](https://bzyo.github.io/unknowndevice64-1/)<br>
 &nbsp;&nbsp;&nbsp;unknowndevice64: 2 [walkthrough](https://bzyo.github.io/unknowndevice64-2/)
+
+**Silky Series by Silky**<br>
+&nbsp;&nbsp;&nbsp;Silky-CTF: 0x01 [walkthrough](https://bzyo.github.io/silky-ctf-0x01/)<br>
+&nbsp;&nbsp;&nbsp;Silky-CTF: 0x02 [walkthrough](https://bzyo.github.io/silky-ctf-0x02/)
