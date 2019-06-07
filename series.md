@@ -34,6 +34,6 @@ permalink: /series/
 &nbsp;&nbsp;&nbsp;Silky-CTF: 0x01 [walkthrough](https://bzyo.github.io/silky-ctf-0x01/)<br>
 &nbsp;&nbsp;&nbsp;Silky-CTF: 0x02 [walkthrough](https://bzyo.github.io/silky-ctf-0x02/)
 
-**007 Series by [@_creosote](https://twitter.com/_creosote)**
+**007 Series by [@_creosote](https://twitter.com/_creosote)**<br>
 &nbsp;&nbsp;&nbsp;GoldenEye: 1 [walkthrough](https://bzyo.github.io/goldeneye-1/)<br>
 &nbsp;&nbsp;&nbsp;Casino Royale: 1 [walkthrough](https://bzyo.github.io/casino-royale-1/)
