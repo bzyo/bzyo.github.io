@@ -6,11 +6,11 @@ permalink: /series/
 
 ## Walkthrough Series
 
-**Matrix Seris by [@unknowndevice64](https://twitter.com/unknowndevice64)**<br>
+**Matrix**<br>
 &nbsp;&nbsp;&nbsp;Matrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
 &nbsp;&nbsp;&nbsp;Matrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)
 
-**DC Series by [@DCAU7](https://twitter.com/DCAU7)**<br>
+**DC**<br>
 &nbsp;&nbsp;&nbsp;DC: 1 [walkthrough](https://bzyo.github.io/dc-1/)<br>
 &nbsp;&nbsp;&nbsp;DC: 2 [walkthrough](https://bzyo.github.io/dc-2/)<br>
 &nbsp;&nbsp;&nbsp;DC: 3 [walkthrough](https://bzyo.github.io/dc-3/)<br>
@@ -18,22 +18,22 @@ permalink: /series/
 &nbsp;&nbsp;&nbsp;DC: 5 [walkthrough](https://bzyo.github.io/dc-5/)<br>
 &nbsp;&nbsp;&nbsp;DC: 6 [walkthrough](https://bzyo.github.io/dc-6/)
 
-**Raven by William McCann**<br>
+**Raven**<br>
 &nbsp;&nbsp;&nbsp;Raven: 1 [walkthrough](https://bzyo.github.io/raven-1/)<br>
 &nbsp;&nbsp;&nbsp;Raven: 2 [walkthrough](https://bzyo.github.io/raven-2/)
 
-**BTRSys by [@ismailonderkaya](https://twitter.com/ismailonderkaya)**<br>
+**BTRSys**<br>
 &nbsp;&nbsp;&nbsp;BTRSys: v1 [walkthrough](https://bzyo.github.io/btrsys-v1/)<br>
 &nbsp;&nbsp;&nbsp;BTRSys: v2.1 [walkthrough](https://bzyo.github.io/btrsys_v21/)
 
-**unknowndevice64 Series by [@unknowndevice64](https://twitter.com/unknowndevice64)**<br>
+**unknowndevice64**<br>
 &nbsp;&nbsp;&nbsp;unknowndevice64: 1 [walkthrough](https://bzyo.github.io/unknowndevice64-1/)<br>
 &nbsp;&nbsp;&nbsp;unknowndevice64: 2 [walkthrough](https://bzyo.github.io/unknowndevice64-2/)
 
-**Silky Series by Silky**<br>
+**Silky**<br>
 &nbsp;&nbsp;&nbsp;Silky-CTF: 0x01 [walkthrough](https://bzyo.github.io/silky-ctf-0x01/)<br>
 &nbsp;&nbsp;&nbsp;Silky-CTF: 0x02 [walkthrough](https://bzyo.github.io/silky-ctf-0x02/)
 
-**007 Series by [@_creosote](https://twitter.com/_creosote)**<br>
+**007**<br>
 &nbsp;&nbsp;&nbsp;GoldenEye: 1 [walkthrough](https://bzyo.github.io/goldeneye-1/)<br>
 &nbsp;&nbsp;&nbsp;Casino Royale: 1 [walkthrough](https://bzyo.github.io/casino-royale-1/)
