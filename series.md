@@ -8,7 +8,8 @@ permalink: /series/
 
 **Matrix**<br>
 &nbsp;&nbsp;&nbsp;Matrix: 1 [walkthrough](https://bzyo.github.io/matrix-1/)<br>
-&nbsp;&nbsp;&nbsp;Matrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)
+&nbsp;&nbsp;&nbsp;Matrix: 2 [walkthrough](https://bzyo.github.io/matrix-2/)<br>
+&nbsp;&nbsp;&nbsp;Matrix: 3 [walkthrough](https://bzyo.github.io/matrix-3/)
 
 **DC**<br>
 &nbsp;&nbsp;&nbsp;DC: 1 [walkthrough](https://bzyo.github.io/dc-1/)<br>
