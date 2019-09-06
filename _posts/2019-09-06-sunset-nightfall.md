@@ -76,5 +76,6 @@ root
 <br><br>
 
 **and flag**
-<br>![alt text](../vulnhub/sunset_nightfall/root_flag.png)
+<br>![alt text](../vulnhub/sunset_nightfall/root_flag1.png)
+<br>![alt text](../vulnhub/sunset_nightfall/root_flag2.png)
 <br><br>
