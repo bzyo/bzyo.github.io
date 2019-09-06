@@ -63,12 +63,12 @@ root
 <br>![alt text](../vulnhub/sunset_nightfall/ssh_nightfall.png)
 <br><br>
 
-**update reverse shell and reconnect**
-<br>![alt text](../vulnhub/sunset_nightfall/newrevshell.png)
+**grab root shadow hash**
+<br>![alt text](../vulnhub/sunset_nightfall/sudo_shadow.png)
 <br><br>
 
-**setup nfs for priv esc again**
-<br>![alt text](../vulnhub/sunset_nightfall/newcopy.png)
+**run hash against hashcat**
+<br>![alt text](../vulnhub/sunset_nightfall/hashcat.png)
 <br><br>
 
 **we have root**
