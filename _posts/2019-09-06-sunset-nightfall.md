@@ -40,7 +40,7 @@ root
 <br><br>
 
 **upload new file to .ssh folder using ftp**
-<br>![alt text](../vulnhub/sunset_nightfall/ftp_authkeys.png)
+<br>![alt text](../vulnhub/sunset_nightfall/up_authkeys.png)
 <br><br>
 
 **ssh as matt works**
