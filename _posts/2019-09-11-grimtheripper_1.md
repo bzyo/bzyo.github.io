@@ -57,7 +57,7 @@ root
 <br><br>
 
 **all links on site direct to 127.0.0.1**
-<br>![alt text](../vulnhub/GrimTheRipper_1/localhost.png)
+<br>![alt text](../vulnhub/GrimTheRipper_1/localhostwp.png)
 <br><br>
 
 **using target redirector from burpe, able to login**
