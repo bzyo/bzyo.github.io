@@ -37,7 +37,8 @@ permalink: /series/
 
 **007**<br>
 &nbsp;&nbsp;&nbsp;GoldenEye: 1 [walkthrough](https://bzyo.github.io/goldeneye-1/)<br>
-&nbsp;&nbsp;&nbsp;Casino Royale: 1 [walkthrough](https://bzyo.github.io/casino-royale-1/)
+&nbsp;&nbsp;&nbsp;Casino Royale: 1 [walkthrough](https://bzyo.github.io/casino-royale-1/)<br>
+&nbsp;&nbsp;&nbsp;View2aKill: 1 [walkthrough](https://bzyo.github.io/view2akill-1/)
 
 **sunset**<br>
 &nbsp;&nbsp;&nbsp;sunset: 1 [walkthrough](https://bzyo.github.io/sunset-1/)<br>
