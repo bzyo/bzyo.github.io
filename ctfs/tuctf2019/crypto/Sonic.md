@@ -1,5 +1,5 @@
 # Challenge #
-<br>![alt text](reverse1.png)
+<br>![alt text](crypto2.png)
 <br><br>
 # Solution #
 <pre>
